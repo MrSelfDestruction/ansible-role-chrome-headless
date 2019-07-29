@@ -1,5 +1,4 @@
 ---
-# defaults file for chromedriver
-chromedriver_install_prefix: /opt/google/chromedriver
-
-chromedriver_install_as_service: false
+chromedriver_version: 'latest'
+chromedriver_bin: chromedriver
+chromedriver_install_prefix: /opt/google/chromedriver/bin

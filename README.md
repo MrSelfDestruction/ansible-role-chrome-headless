@@ -1,7 +1,7 @@
-koichirok.chromedriver
+esolitos.chrome-headless
 =========
 
-Ansible role to install chromedriver
+Ansible role to install chrome and chromedriver, which are useful for Behat testing.
 
 Role Variables
 --------------
@@ -10,17 +10,14 @@ See [defaults/main.yml](./defaults/main.yml)
 
 variable | default | description
 ---------|---------|------------
-chromedriver\_install\_prefix| /opt/google/chromedriver | The path where the chromedriver is installed. chromedriver executable is installed at {{chromedriver\_install\_prefix}}/bin|
-chromedriver\_install\_as\_service | `false` | TBD |
-chromedriver\_service\_state| not defined | TBD |
-chromedriver\_service\_enabled| not defined | TBD |
-chromedriver\_service\_user| `daemon` | TBD |
-chromedriver\_service\_group| `daemon` | TBD |
+chromedriver_version | latest | Version to use for installation. Use Latest to get always the most up to date. |
+chromedriver_bin | chromedriver | The binaly name of chromedriver. |
+chromedriver_path | /opt/google/chromedriver/bin/ | The path where the chromedriver is installed. |
 
 Dependencies
 ------------
 
-- koichirok.google\_chrome
+none
 
 Example Playbook
 ----------------
@@ -28,7 +25,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-     - koichirok.chromedriver
+     - esolitos.chrome-headless
 ```
 
 License
