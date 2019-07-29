@@ -26,7 +26,7 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-     - esolitos.chrome-headless
+     - esolitos.chrome_headless
 ```
 
 License
