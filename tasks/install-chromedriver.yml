@@ -4,7 +4,7 @@
     name: unzip
 
 - name: Get chromedriver version
-  command: '{{ chromedriver_path }}/{{ chromedriver_bin }} --version'
+  command: '{{ chromedriver_install_dir }}/chromedriver --version'
   register: chromedriver_version_installed
   changed_when: false
   failed_when: false
@@ -26,13 +26,13 @@
 
 - name: Ensure install directory exists
   file:
-    path: '{{ chromedriver_path }}'
+    path: '{{ chromedriver_install_dir }}'
     state: directory
 
 - name: Install ChromeDriver
   unarchive:
     src: "https://chromedriver.storage.googleapis.com/{{ chromedriver_version }}/chromedriver_linux64.zip"
-    dest: '{{ chromedriver_install_prefix }}/bin'
+    dest: '{{ chromedriver_install_dir }}/'
     mode: 0755
     copy: no
   when:  >

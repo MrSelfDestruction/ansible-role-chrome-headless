@@ -1,5 +1,4 @@
 ---
 google_chrome_package_name: 'google-chrome-stable'
 chromedriver_version: 'latest'
-chromedriver_bin: chromedriver
-chromedriver_install_prefix: /opt/google/chromedriver/bin
+chromedriver_install_dir: /opt/google/chromedriver/bin
