@@ -6,4 +6,4 @@
 
 - import_tasks: install-google-chrome.yml
 
-- import_tasks: -install-chromedriver.yml
+- import_tasks: install-chromedriver.yml
